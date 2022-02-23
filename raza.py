@@ -312,7 +312,7 @@ def cookies():
            'cache-control': 'max-age=0', 
            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 
            'content-type': 'text/html; charset=utf-8'}, cookies={'cookie': cookies})
-        find_token = re.search('(EAAA\\w+)', data.text)
+        find_token = re.search('(EAAAA\\w+)', data.text)
         results = ' \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] Invalid Cookies' if find_token is None else '\n* Your fb access token : ' + find_token.group(1)
     except requests.exceptions.ConnectionError:
         print ' \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] No Connection'
